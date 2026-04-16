@@ -1,0 +1,50 @@
+{
+  "dataset": "MNIST handwritten digits",
+  "input_size": "28 x 28 grayscale image",
+  "input_shape_for_cnn": [
+    28,
+    28,
+    1
+  ],
+  "train_split": "90% of training set for training",
+  "validation_split": "10% of training set for validation",
+  "test_split": "Original MNIST test set",
+  "architecture": [
+    "Conv2D(32, 3x3, relu, same)",
+    "MaxPool(2x2)",
+    "Conv2D(64, 3x3, relu, same)",
+    "MaxPool(2x2)",
+    "Flatten",
+    "Dense(128, relu)",
+    "Dropout(0.5)",
+    "Dense(10, softmax)"
+  ],
+  "conv_blocks": 2,
+  "output_classes": 10,
+  "optimizer": "Adam",
+  "batch_size": 128,
+  "epochs": 10,
+  "early_stopping_patience": 3,
+  "loss_function": "categorical_crossentropy",
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1-score",
+    "confusion matrix"
+  ],
+  "model_type": "Convolutional Neural Network (CNN)",
+  "test_loss": 0.0278,
+  "test_accuracy": 0.99,
+  "keras_test_accuracy": 0.99,
+  "total_parameters": 421642,
+  "misclassified_samples": 100,
+  "model_path": "mnist_cnn_model.keras",
+  "history_plot": "history_plot.png",
+  "confusion_matrix_plot": "confusion_matrix.png",
+  "classification_report": "classification_report.csv",
+  "model_summary": "model_summary.txt",
+  "misclassified_plot": "misclassified_samples.png",
+  "feature_maps_plot": "feature_maps.png",
+  "sample_prediction_plot": "sample_prediction.png"
+}

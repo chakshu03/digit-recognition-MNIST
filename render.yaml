@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: digit-recognition-cnn-app
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python train.py
+    startCommand: python -m streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11

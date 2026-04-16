@@ -17,13 +17,13 @@ This is a fresh MNIST digit recognition project built with:
 Build command:
 
 ```powershell
-py -3.11 train.py
+python train.py
 ```
 
 Start command:
 
 ```powershell
-py -3.11 -m streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ## Render Commands
@@ -31,7 +31,7 @@ py -3.11 -m streamlit run app.py
 Build command:
 
 ```bash
-pip install -r requirements.txt && python train.py
+pip install -r requirements.txt
 ```
 
 Start command:
